@@ -2,7 +2,9 @@ EHA
 ===
 THE ENVIRONMENT AND HEALTH ATLAS FOR ENGLAND AND WALES
 A collection of online maps illustrating geographical distributions of disease risk and environmental agents
+
 Health conditions:
+
 Lung cancer
 Breast cancer
 Prostate cancer mortality
@@ -17,7 +19,10 @@ Chronic Obstructive Pulmonary Disease (COPD) mortality
 Kidney disease mortality
 Stillbirths
 Low birth weight
+
+
 Environmental agents:
+
 Agricultural pesticides
 Fungicides - 2000
 Herbicides - 2000
@@ -28,6 +33,8 @@ Chlorination disinfection by products (DBPs) in drinking water – trihalomethan
 DBPs Summer - 2000
 DBPs Winter - 2000
 Sunlight duration - 1980-2005
+
+
 
 Actual disease map tiles have been created in collaboration with cloudmade, an example dataset converted from a shapefile can be found  in
 in the OSM folder. The conversion from .SHP to .OSM has been carried out using the shp2osm python script. 
