@@ -1,0 +1,301 @@
+< !DOCTYPE html >
+  < html >
+  < head >
+  < title > Environmental Health Atlas
+for England and Wales < /title>
+	<meta charset="utf-8" / >
+<!--<meta name="keywords" content="health , environmental , epidemiology, atlas , cancer , risk , england , wales , sahsu">
+< meta name = "description"
+content = "Collection of maps representing geographic patterns of disease and environmental exposure." >
+  < meta name = "viewport"
+content = "width=device-width, initial-scale=1.0" > -->
+<!--CSS Stylesheets-->
+< link rel = "stylesheet"
+href = "css/leaflet/0.6.2/leaflet.css" / >
+<!--[if lte IE 8]><link rel="stylesheet" href="css/leaflet/0.6.2/leaflet.ie.css" /><![endif]-->
+< link rel = "stylesheet"
+href = "css/map_ha.css" / >
+  < link rel = "stylesheet"
+href = "css/simpletabs.css" / >
+
+<!-- FONTS -->
+< link href = 'http://fonts.googleapis.com/css?family=Oswald'
+rel = 'stylesheet'
+type = 'text/css' >
+  < link href = 'http://fonts.googleapis.com/css?family=Source+Sans+Pro'
+rel = 'stylesheet'
+type = 'text/css' >
+
+<!-- Spatial Data 	-->
+< script src = "GEOJSONS/counties/counties.js"
+type = "text/javascript" > < /script>
+	
+	<!-- Libraries -->	
+	<!--<script type="text/javascript
+" src="
+js / detect.js "></script>
+	<script type="
+text / javascript " src="
+js / libs / jquery1.7.1.js "></script>
+	<script type="
+text / javascript " src="
+js / libs / leaflet / leaflet - 0.6.2.js "></script>
+	<script src="
+js / libs / flot / jquery.flot.js "></script>
+	<script src="
+js / libs / simpleTabs / simpletabs_1.3.packed.js "></script>
+	<!--[if IE]><script language="
+javascript " type="
+text / javascript " src="
+js / flot / excanvas.min.js "></script><![endif]--> 
+	
+	<!-- MY JS code -->
+	<!--<script type="
+text / javascript " src="
+js / EHA / eha.js "></script>
+	<script type="
+text / javascript " src="
+js / EHA / map / eha.map.js "></script>
+	<script type="
+text / javascript " src="
+js / EHA / map / eha.map.geojson.js "></script>
+	<script type="
+text / javascript " src="
+js / EHA / box / eha.box.js "></script>
+	<script type="
+text / javascript " src="
+js / EHA / graph / eha.graph.js "></script>
+	<script type="
+text / javascript " src="
+js / EHA / postcode / eha.postcode.js "></script>
+	<script src="
+js / hover / hoverbox_counties.js " ></script>-->
+
+</head>
+<body>
+
+	<noscript>
+			
+			<p>Your browser does not have JavaScript enabled!
+			This platform heavily relies on Javascript, please enable it (<a href="
+http: //www.enable-javascript.com/">http://www.enable-javascript.com/</a>).</p>
+
+< /noscript>
+
+	<div id="mainWrap">	 
+		<div id='menu'>
+				<div class='gender'>
+						<div>
+							<label for='female'><img src='images/female_m.png ' alt='
+female ' /></label>
+							<input id='
+female ' type='
+radio ' name='
+sex ' value='
+female ' style='
+margin - left: 8px ' />
+						</div>
+						<div><label for='
+male ' ><img src='
+images / male_m.png ' alt='
+male ' /></label>
+						<input id='
+male ' type='
+radio ' name='
+sex ' value='
+male ' checked /></div>
+				</div>
+				<dl id='
+sample ' class='
+dropdown ' style='
+width: 300px;
+margin: 0;
+padding: 0;
+'>
+					<dt><a href='#
+'><span>Lung Cancer</span></a></dt>
+					<dd>
+					    <ul>
+							<li><a href='#
+'>Lung Cancer<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Leukaemia<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Breast Cancer<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Prostate Cancer<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Bladder Cancer<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Brain Cancer<span class='
+value '></span></a></li>
+							<li><a href='#
+'>COPD<span class='
+value '></span></a></li>
+							<li><a href='#
+'>IHD<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Kidney Cancer<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Larynx Cancer<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Liver Cancer<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Melanoma<span class='
+value '></span></a></li>
+							<li><a href='#
+'>Mesothelioma<span class='
+value '></span></a></li>
+					    </ul>
+					</dd>
+			    </dl>	
+		</div>
+		<div id='
+rightCol '>	
+			<div class="simpleTabs">
+		        <ul class="simpleTabsNavigation">
+					<li><a href="#" id="diseaseInfo">LungCancer</a></li>
+		            <li><a href="#">Risk Factors</a></li>
+					<li><a href="#">FAQ</a></li>
+		        </ul>
+				<div class="simpleTabsContent" >
+					<div id="LungCancer" class="showInfo">
+						<div class='
+rate '>	
+							<h2>National male lung cancer rate (2009)</h2>
+							<p>58.8 cases per 100,000 population</p>
+							<p style='
+font - size: 11px;
+color: #FFB90F;
+line - height: 15px '>
+							Cannot be directly compared to the Relative Risks (RR). 
+							</p>
+						</div>
+						<ul>
+							<li>
+								Lung cancer is the second most common cancer in the UK among men and the third most common in women. 
+							</li>
+							<li>
+								In England & Wales there were approximately 35,000 cases of lung cancer (19,800, male, 15,600 female) diagnosed and 30,000 deaths (17,000 male, 13,000 female) due to lung cancer in 2009, the last year of data for the maps.    
+							</li>
+							<li>
+								The average (median) number of cases in a census ward was 47 in males and 26 in females over the twenty-five year period 1985-2009.							
+							</li>
+							<li>	
+								The maps show highest risks for lung cancer in conurbations and industrial areas of England & Wales. This is likely to reflect past smoking patterns and occupational exposures (e.g. to asbestos) with a smaller potential contribution from air pollution exposures. 
+							</li>
+						</ul>
+						
+					</div>
+					
+					<!-- Textual information disease specific. -->
+					<div id="Leukaemia" class="diseases">
+						<div class='
+rate '>	
+							<h2>National leukaemia rate (2009)</h2>
+							<p>X cases per 100,000 population</p>
+							<p style='
+font - size: 11px;
+color: #FFB90F;
+line - height: 15px '>
+							Cannot be directly compared to the Relative Risks (RR). 
+							</p>
+						</div>
+					</div>
+					<div id="BreastCancer" class="diseases">
+						<div class='
+rate '>	
+							<h2>National breast cancer rate (2009)</h2>
+							<p>X cases per 100,000 population</p>
+							<p style='
+font - size: 11px;
+color: #FFB90F;
+line - height: 15px '>
+							Cannot be directly compared to the Relative Risks (RR). 
+							</p>
+						</div>
+					</div>
+					<div id="ProstateCancer" class="diseases"></div>		
+					<div id="BladderCancer" class="diseases"></div>		
+					<div id="BrainCancer" class="diseases"></div>		
+					<div id="COPD" class="diseases"></div>		
+					<div id="IHD" class="diseases"></div>
+					<div id="KidneyCancer" class="diseases"></div>		
+					<div id="LarynxCancer" class="diseases"></div>		
+					<div id="LiverCancer" class="diseases"></div>		
+					<div id="Melanoma" class="diseases"></div>
+					<div id="Mesothelioma" class="diseases"></div>								
+						
+				</div>
+				<div class="simpleTabsContent">
+					<!--<input type='
+text ' name='
+postcode ' id='
+postcode ' maxlength='
+10 ' value="Enter Postcode" />
+						<div id="pcdInfo"></div>
+					<div id="pcdBtn">search</div>-->
+					<div>
+						The fraction of lung cancer attributable to lifestyle and environmental factors in males in the UK in 2010.
+					</div>	
+					<img src='
+images / lung_chart.png ' alt='
+lung cancer attributable to environmental factors uk ' style ='
+margin: 5 % 10 % ' />
+				</div>
+				<div class="simpleTabsContent">
+					<!--<h1>The Environment and Health Atlas</h1> 
+					is a collection of maps representing geographic patterns of disease and environmental exposure.
+					<div class="parag">
+						<h2>Health maps </h2> are displayed as thematic maps at ward-level (1000 - 10000 people) covering a 26 year period,  
+						produced for males and females 1985-2009. The figures displayed in this platform  represent the area-specific relative
+						risks, a measure of risk in which the local population is compared with the total risk in England and Wales.
+						The analysis has taken into consideration the population age, sex and socio economic status, statistical methods to correct 
+						small area random fluctuation have also been adopted. 
+					</div>
+					The maps produced were developed specifically for the Atlas. Unlike other UK atlases (looking at district, 
+					NHS board or primary care trust level), this Atlas provides a finer 
+					spatial resolution than available previously to better show and understand geographical variability.
+					The maps provide a picture of long-term geographical variability. Conclusions about causal associations cannot
+					be drawn by directly overlaying environmental and health maps, contextual information and study is always 
+					needed. Also, the maps cannot be used as evidence of clusters of disease, for which additional information 
+					and analysis methods would be needed.  -->
+				</div>	        
+		    </div>
+		</div>
+		<div id="map"></div>
+		<div id="graphLegend"></div>
+		<div id="showhide">
+			<a href="#" class="shown">Show Chart</a>
+			<a href="#" class="hidden">Hide Chart</a></div>
+		<div id="graph"></div>
+		
+		<div id='
+countiesTooltip ' class='
+hoverBox '>
+			<div class='
+hoverCaption ' ></div>
+		</div>
+		
+		<div id="myLayers"></div>
+	
+	</div>
+	<!--<script>
+		EHA.map.init();
+		EHA.map.geojson.init();
+		EHA.box.init();
+		EHA.graph.init();	
+	</script>
+	<script type="text/javascript" src="js/EHA/events/eha.events.js"></script>--> 
+
+</body>
+</html>

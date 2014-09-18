@@ -1,0 +1,65 @@
+	 /* Landing page */
+	div# landing {
+	  position: relative;
+	  height: auto;
+	  width: auto;
+	  width: 1036px;
+	  height: 900px;
+	  margin: 0 auto;
+
+	}#
+	landing div# shot {
+	  background: url( "../images/eha_landing.JPG" ) no - repeat scroll 2px 4px transparent;
+	  /* IE 8 */
+	  - ms - filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	  /* IE 5-7 */
+	  filter: alpha( opacity = 50 );
+	  /* Netscape */
+	  - moz - opacity: 0.5;
+	  /* Safari 1.x */
+	  - khtml - opacity: 0.5;
+	  /* Good browsers */
+	  opacity: 0.5;
+	  position: absolute;
+	  width: 100 % ;
+	  height: 100 %
+	}#
+	landing div# sorry {
+	  width: 350px;
+	  height: 450px;
+	  margin: 180px 0 0 300px;
+	  background - color: white;
+	  position: absolute;
+	  border: 3px solid #8DB6CD;
+		}
+		# landing div# sorry h1 {
+	    margin: 15px 10px;
+	    font - size: 22px;
+	    font - family: Verdana,
+	    Geneva,
+	    sans - serif;
+	    color: #FF9912
+	  }#
+	  landing div# sorry p {
+	    margin: 20px 10px 10px 10px;
+	    font - family: Arial,
+	    "Times New Roman",
+	    sans - serif;
+	    line - height: 20px;
+	    font - size: 14px;
+	    color: #696969
+		}
+		ul{
+			padding:0;
+			margin:0 10px;
+			list-style-type:none
+		}
+		
+		li a{
+			color:# 00688B;
+	    font - family: Verdana,
+	    "Times New Roman",
+	    sans - serif;
+	    font - size: 11px;
+	    line - height: 25px
+	  }

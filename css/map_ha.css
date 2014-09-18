@@ -1,0 +1,782 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt,
+var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font - size: 100 % ;
+  font: inherit;
+  vertical - align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+@
+font - face {
+  font - family: sanspro;
+  src: url( '../fonts/fontsused/sourcesanspro-regular-webfont.eot' );
+  src: url( '../fonts/fontsused/sourcesanspro-regular-webfont,eot?#iefix' ) format( 'embedded-opentype' ),
+  url( '../fonts/fontsused/sourcesanspro-regular-webfont.woff' ) format( 'woff' ),
+  url( '../fonts/fontsused/sourcesanspro-regular-webfont.ttf' ) format( 'truetype' ),
+  url( '../fonts/fontsused/sourcesanspro-regular-webfont.svg#open_sansregular' ) format( 'svg' );
+  font - weight: normal;
+  font - style: normal;
+}
+
+@
+font - face {
+  font - family: 'opensans';
+  src: url( '../fonts/fontsused/opensans-regular-webfont.eot' );
+  src: url( '../fonts/fontsused/opensans-regular-webfont.eot?#iefix' ) format( 'embedded-opentype' ),
+  url( '../fonts/fontsused/opensans-regular-webfont.woff' ) format( 'woff' ),
+  url( '../fonts/fontsused/opensans-regular-webfont.ttf' ) format( 'truetype' ),
+  url( '../fonts/fontsused/opensans-regular-webfont.svg#open_sansregular' ) format( 'svg' );
+  font - weight: normal;
+  font - style: normal;
+}
+
+body {
+  background: url( "images/bg.jpg" ) repeat scroll 0 0# FAFAFA;
+  overflow - x: hidden;
+  font - family: 'opensans',
+  Candara,
+  Optima,
+  Arial,
+  sans - serif; - webkit - text - stroke: 1px transparent;
+  color: #636262;
+	overflow-y:hidden;
+	height:100%;
+}
+a {
+    color: # 1580AF;
+  text - decoration: none;
+}
+a: active,
+a: focus {
+  outline: 0 none;
+}
+p,
+div,
+table,
+tr,
+td,
+form,
+input {
+  font - weight: normal;
+  margin: 0;
+  padding: 0;
+  text - decoration: none;
+}
+div.simpleTabsContent h1 {
+  display: inline;
+  font - size: 14px;
+  margin: 0;
+  padding: 0;
+  text - transform: uppercase;
+  width: auto;
+}
+div.simpleTabsContent h2 {
+  color: #8DB6CD;
+	margin-top:20px;
+}
+div.simpleTabsContent div.parag {
+    margin: 10px 0;
+}
+.diseases {
+    display: none;
+}
+div.simpleTabsContent div.showInfo {
+    display: block;
+    margin-top: 4%;
+}
+div.showInfo ul {
+    margin: 20px 0;
+}	
+div.showInfo ul , .info ul , .glossary ul{
+    list-style-type: none;
+    padding: 0;
+}
+div.showInfo ul li , .info ul li, .info p.reference , .secondTab h2  {
+    margin: 8px 40px 0 10px;
+}
+
+.info h3.riskFactor{
+	margin: 20px 45px 0px 20px;
+	font-weight: bold;
+	font-size: 12px;
+	color: # 8DB6CD;
+}
+div.glossary ul li {
+  font - size: 16px;
+  border: 1px solid white;
+}
+div.glossary ul li a {
+  color: #8DB6CD;
+	font-weight:normal;
+	display:block;
+	background-color:white;
+	margin:3px 0;
+	padding:8px;
+}
+div.glossary ul li div{
+	font-size: 13px ;
+	line-height:20px;
+	padding:2px 8px;
+	margin-bottom:20px;
+	display:none;
+}
+div.glossary ul li a:hover{
+	background-color:# F2F2F2;
+}
+
+.info.showInfo {
+  margin: 0 10px;
+}
+
+.info p.reference {
+  font - size: 11px;
+  color: #808080;
+	word-wrap:break-word;
+	text-align: left;
+}
+.info p.reference span{
+	font-weight:bold
+}
+.info p.reference a{
+	font-weight:normal
+}
+div.showInfo .rate   {
+    margin: 0 10px;
+}
+div.showInfo .rate   .rateCaption{
+	font-size:11px;
+	line-height:15px
+}
+div.showInfo .rate p{
+	color:# FFB90F
+}
+div.showInfo.rate p,
+div.showInfo.rate h2,
+div.showInfo.gender_na {
+  display: none;
+}
+div.showInfo ul li img {
+  margin - top: 10px;
+}
+p.disclaimer {
+  font - size: 11px;
+  font - style: italic;
+  margin: 8px 40px 0 10px;
+}
+
+#
+mainWrap {
+  height: 90 % ;
+  margin: 0 1 % ;
+  position: absolute;
+  width: 99 % ;
+}#
+leftCol {
+  position: relative;
+  height: 100 % ;
+  overflow: hidden;
+}#
+rightCol {
+  float: right;
+  height: 100 % ;
+  width: 450px;
+
+  /* margin-top:60px; */
+}#
+wardsTooltip div# postcode {
+  background - color: rgba( 255, 255, 255, 0.92 );
+  border: 1px solid# CCCCCC;
+  border - radius: 5px 5px 5px 5px;
+  box - shadow: 0 1px 5px rgba( 0, 0, 0, 0.09 ) inset,
+  0 0 5px 5px rgba( 16, 78, 139, 0.075 );
+  margin - top: 50px;
+  width: 100 % ;
+  padding: 0;
+  height: 40px;
+}#
+wardsTooltip div# postcode input {
+  background - color: transparent;
+  border: none;
+  outline: 0 none;
+  color: #8DB6CD;
+	font-size: 14px ;
+	padding: 8px 4px;
+	float: left;
+	width: 110px;
+	margin: 4px;
+	font-family: opensans;
+}
+
+# postcodeInfo {
+    height: 30px;
+    width: 100px;
+  }
+
+  #
+  wardsTooltip div# postcode div {
+    float: right;
+    height: auto;
+    margin: 3px;
+    display: none;
+  }
+
+  #
+  wardsTooltip div# postcode# pcdInfo {
+    color: #CD3700;
+    font - size: 12px;
+    width: 30 % ;
+    display: block;
+    height: 30px;
+    margin - top: 5px;
+    line - height: 12px;
+  }
+
+  #
+  wardsTooltip div# postcode# pcdBtn {
+    background - color: #8DB6CD;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.09) inset, 0 0 5px 5px rgba(16, 78, 139, 0.075);
+    color: # FFFFFF;
+    cursor: pointer;
+    font: 14px habold,
+    sans - serif;
+    padding: 4px 10px;
+    margin: 7px;
+  }
+
+  #
+  menu {
+    height: auto;
+    margin: 10px 0 0 0;
+  }
+    .gender {
+      float: right;
+      height: auto;
+      width: 130px;
+  }
+
+  .gender label {
+    cursor: pointer;
+    height: 30px;
+  }
+    .gender div {
+      cursor: pointer;
+      float: left;
+      height: 21px;
+      width: 65px;
+  }
+    .gender div input: hover {
+      cursor: pointer;
+  }
+    .desc {
+      color: #6B6B6B;
+}
+.desc a {
+    color: # 0092DD;
+  }
+
+  .dropdown dd,
+  .dropdown dt,
+  .dropdown ul {
+    margin: 0;
+    padding: 0;
+  }
+    .dropdown dt {
+      display: inline - block;
+      border - bottom: 1px solid #8DB6CD;
+}	 
+.dropdown dd {
+    position: relative;
+}
+.dropdown dt a {
+    width:auto;
+}
+.dropdown a, .dropdown a:visited {
+    color: # 8DB6CD;
+      font - size: 32px / 30px;
+  }
+    .dropdown dt a span {
+      cursor: pointer;
+      float: left;
+      padding: 0 5px;
+      font: 32px sanspro;
+  }
+    .dropdown dt a div {
+      background: url( "../images/down_arrow_blue.png" ) no - repeat scroll right center# FAFAFA;
+      width: 20px;
+      height: 40px;
+      float: right;
+      padding - left: 10px;
+  }
+    .dropdown dd ul {
+      background: none repeat scroll 0 0# F0F8FF;
+      color: #8DB6CD;
+    display: none;
+    left: 0;
+    list-style: none outside none;
+    min-width: 300px;
+    padding: 5px 0;
+    position: absolute;
+    top: 2px;
+    width: auto;
+    z-index: 9999;
+}
+.dropdown span.value {
+    display: none;
+}
+.dropdown dd ul li a {
+    display: block;
+    font-size: 22px;
+    padding: 3px;
+}
+.dropdown dd ul li a:hover {
+    background-color: # FFFFFF;
+  }#
+  map {
+    height: 94 % ;
+  }#
+  wardsTooltip {
+    float: right;
+    margin: 10px;
+    position: relative;
+  }#
+  countiesTooltip {
+    display: none;
+    height: auto;
+    position: absolute;
+  }#
+  wardsTooltip,
+  #countiesTooltip,
+  #pcd_container {
+    border - radius: 15px 15px 15px 15px;
+    min - width: 210px;
+    padding: 4px 0 0;
+
+    width: 20 % ;
+    z - index: 9999;
+    font - family: opensans; - webkit - text - stroke: 1px transparent;
+  }#
+  wardsTooltip.hoverBlock,
+  #countiesTooltip.hoverBlock,
+  #pcd_container.hoverBlock {
+    background: none repeat scroll 0 0 rgba( 255, 255, 255, 0.8 );
+    border - radius: 5px 5px 5px 5px;
+    box - shadow: 0 0 15px rgba( 0, 0, 0, 0.2 );
+    height: 130px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100 % ;
+
+  }
+    .wardsClicked {
+      border: 1px solid #7CCD7C;
+    box-shadow: 0 0 10px # 7CCD7C inset!important;
+  }#
+  countiesTooltip.hoverCaption {
+    background - color: #BDFCC9;
+    border - radius: 10px 10px 10px 10px;
+    color: #838B8B;
+    font-size: 16px ;
+    height: auto;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8;
+    overflow: hidden;
+    padding: 8px 10px;
+    position: absolute;
+    top: 0;
+    width: auto;
+}
+# wardsTooltip div {
+      font - size: 14px;
+      height: 20px;
+      overflow: hidden;
+      padding: 2px;
+      position: relative;
+      width: auto;
+    }#
+    wardsTooltip# wardsName {
+      font - size: 18px;
+    }#
+    wardsTooltip# districtName,
+    #wardsTooltip# wardsName,
+    #pop,
+    #clear {
+      color: #808080;
+    margin: 0 5px;
+	line-height: 20px;
+}
+}
+# wardsTooltip# districtName {
+        border - bottom: 1px solid# B8B8B8;
+        padding - bottom: 5px;
+      }#
+      pop {
+        float: right;
+        margin - top: 2px;
+      }#
+      clear {
+        display: none;
+        float: left;
+        margin - top: 2px;
+      }#
+      clear a {
+        color: #7CCD7C;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+# clear a: hover {
+          text - decoration: underline;
+        }#
+        wardsTooltip ul {
+          color: #104E8B;
+    margin: 45px 2px;
+    padding: 0;
+    position: absolute;
+}
+# wardsTooltip ul li {
+            height: auto;
+            list - style: none outside none;
+            margin: 0;
+            padding: 0;
+          }#
+          wardsTooltip ul.hoverInfo {
+            float: left;
+            height: 50px;
+            margin - left: 15px;
+          }#
+          wardsTooltip# wardSlct {
+            margin: 5px;
+            padding: 8px 2px;
+          }#
+          wardsTooltip# wardSlct div {
+            float: left;
+            margin - right: 5px;
+          }#
+          rrTitle {
+            font: 18px 'opensans';
+            margin: 0 0 8px 5px;
+            text - transform: uppercase;
+          }#
+          rrTitle span {
+            /* padding-right:20px; */
+          }#
+          arrow {
+            float: left;
+            width: 50px;
+            height: 180px;
+            background: url( '../images/arrow.png' ) no - repeat transparent;
+          }
+
+          .values span {
+            color: #4A708B;
+    font: bold 20px ;
+}
+.cat1 {
+    background-color: # 542788;
+            color: #FFFFFF;
+          }
+            .cat2 {
+              background - color: #8073AC;
+    color: # FFFFFF;
+          }
+            .cat3 {
+              background - color: #B2ABD2;
+              color: #FFFFFF;
+          }
+            .cat4 {
+              background - color: #D8DAEB;
+              color: #9C9C9C;
+}
+.cat5 {
+    background-color: # F7F7F7;
+              color: #9C9C9C;
+}
+.cat6 {
+    background-color: # FEE0B6;
+              color: #9C9C9C;
+}
+.cat7 {
+    background-color: # FDB863;
+              color: #FFFFFF;
+          }
+            .cat8 {
+              background - color: #E08214;
+              color: #FFFFFF;
+          }
+            .cat9 {
+              background - color: #B35806;
+              color: #FFFFFF;
+          }
+            .transparent {
+              opacity: 0.9;
+          }
+
+          #
+          showhide a {
+            background - color: #F0F8FF;
+            color: #737373;
+	cursor: pointer;
+	font-size: 1em;
+	padding: 0.2em 0;
+	text-align: center;
+	height:5%;
+}
+# showhide a: hover {
+              background - color: #1580AF;
+}
+# showhide a.hidden {
+                display: none;
+              }#
+              showhide a.shown {
+                display: block;
+              }#
+              showhide a: hover {
+                color: #999999;
+}
+# showhide# arrow_chart {
+                  vertical - align: bottom;
+                }#
+                graph {
+                  display: block;
+                  height: 34 % ;
+                  position: relative;
+                  margin - left: 25px;
+                }
+
+                .legendrr {
+                  background: none repeat scroll 0 0 rgba( 255, 255, 255, 0.8 );
+                  border - radius: 5px 5px 5px 5px;
+                  box - shadow: 0 0 15px rgba( 0, 0, 0, 0.2 );
+                  color: #555555;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 8px 15px 15px 5px;
+    width: 175px;
+	font-family:'opensans';
+}
+.legendrr div.highl {
+    color: # 555555;
+                  font - weight: bold;
+                }
+                  .legendrr div.highl i {
+                    opacity: 1;
+                }
+                  .legendrr i {
+                    float: left;
+                    height: 20px;
+                    opacity: 0.9;
+                    width: 35px;
+                    margin - right: 10px;
+                }
+
+                .riskFactorsChartLegend {
+                  position: relative;
+                  display: block;
+                  width: auto;
+                  height: 50px;
+                  margin: 20px 10px 30px 20px;
+                }
+
+                .riskFactorsChartLegend div {
+                  width: 185px;
+                  height: auto;
+                  float: left;
+                  text - align: left;
+                  font - size: 11px;
+                  margin: 5px 0;
+                  line - height: 12px;
+                }
+                  .riskFactorsChartLegend div i {
+                    float: left;
+                    height: 12px;
+                    opacity: 0.9;
+                    width: 20px;
+                    margin - right: 8px;
+                }
+
+                .riskFactorsChart {
+                  width: 330px;
+                  height: 200px;
+                  margin: 0 30px;
+                }
+
+                /* Tabs */
+
+                div.simpleTabs {
+                  padding - top: 5px;
+                  position: relative;
+                  height: 100 % ;
+                  margin - top: 25px;
+                }
+                ul.simpleTabsNavigation {
+                  margin: 0;
+                  padding: 0 0 1px;
+                  text - align: left;
+                }
+                ul.simpleTabsNavigation li: first - child {
+                  margin - left: 15px;
+                }
+
+                ul.simpleTabsNavigation li {
+                  display: inline;
+                  list - style: none outside none;
+                  margin: 0;
+                  padding: 0;
+                }
+                ul.simpleTabsNavigation li a {
+                  -moz - border - bottom - colors: none; - moz - border - left - colors: none; - moz - border - right - colors: none; - moz - border - top - colors: none;
+                  border - image: none;
+                  border - width: 1px 1px medium;
+                  color: #808080;
+    font: 18px sanspro;
+    padding: 2%  3%;
+    text-decoration: none;
+}
+ul.simpleTabsNavigation li a:hover {
+    background-color: # F0F8FF;
+                }
+                ul.simpleTabsNavigation li a.current {
+                  background: none repeat scroll 0 0# FFFFFF;
+                  border - bottom: 1px solid# FFFFFF;
+                  color: #8DB6CD;
+}
+div.simpleTabsContent {
+    display: none;
+	height: auto;
+    margin: 0 0 20px 0;
+    padding: 10px 15px 10px 10px;
+    text-align: left;
+	line-height:20px;
+}
+div.simpleTabsContent div,info{
+
+}
+div.simpleTabsContent div.glossary{
+	margin: 20px;
+	width: 340px;
+}
+div.simpleTabsContent li{
+	font-size:13px ;
+	line-height:20px
+}
+div.simpleTabsContent.current{
+	display:block;
+	overflow-y: scroll;
+	height: 92%;
+	position: relative;
+	margin-top: 10px;
+}
+div.simpleTabsContent.currentTab {
+    color: # 696969;
+                  display: block;
+                  font - size: 13px;
+                }#
+                xlabelRR {
+                  z - index: 9999;
+                  position: absolute;
+                  bottom: 0;
+                  width: 100 % ;
+                  height: 15px;
+                  background: url( '../images/wardsCounty.png' ) no - repeat center top;
+                }
+
+                #
+                figures {
+                  z - index: 99999999;
+                  position: absolute;
+                  top: 66 % ;
+                  right: 12px;
+                  border - radius: 5px;
+                  border: 4px solid# BCEE68;
+                  width: 125px;
+                  height: 20px;
+                  padding: 4px 8px;
+                  opacity: 0.6;
+                  background - color: white;
+                  display: none
+                }
+
+                #
+                figures span {
+                  padding: 0px 2px;
+                  font - size: 13px;
+                }
+
+                #
+                navigationMenu {
+                  height: 30px;
+                  position: relative;
+                  margin - right: 40px;
+                }#
+                navigationMenu div {
+                  padding: 10px;
+                  cursor: pointer;
+                  border - bottom - left - radius: 5px;
+                  border - bottom - right - radius: 5px;
+                  width: auto;
+                  float: right;
+                  font - size: 12px;
+                  margin - right: 10px;
+                }#
+                navigationMenu div.home {
+                  background: #8DB6CD none repeat scroll 0 0;
+}
+# navigationMenu div.environmental {
+                    background: #A2CD5A none repeat scroll 0 0;
+
+                  }#
+                  navigationMenu div a {
+                    color: #FFF;
+                  }#
+                  navigationMenu div a: hover {
+                    text - decoration: underline
+                  }#
+                  percentageLbl {
+                    width: 20px;
+                    height: 200px;
+                    background: url( '../images/paf.png' ) no - repeat;
+                    float: left;
+                    margin - left: 5px;
+                  }
+                  div# ylbl_rr {
+                    width: 10px;
+                    height: 34 % ;
+                    background: url( '../images/rr.png' ) no - repeat left center;
+                    float: left;
+                    margin - left: 5px;
+                  }
+                  div# genderIcon {
+                    width: 20px;
+                    height: 29px;
+                    float: right;
+                  }
+                    .iconmale {
+                      background: url( '../images/male_m_small.png' ) no - repeat center center!important;
+                  }
+                    .iconfemale {
+                      background: url( '../images/female_m_small.png' ) no - repeat center center!important;
+                  }

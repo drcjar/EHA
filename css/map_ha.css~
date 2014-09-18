@@ -1,0 +1,228 @@
+/*
+ * Wrapper
+ */
+#
+mainWrap {
+  border: 1px solid black;
+  height: 800px;
+  width: 1024px;
+}
+/*
+ * Menu
+ */
+#
+map# menu {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+}
+
+#
+map# menu span {
+  color: #104E8B;
+	    	font: 20px 'Source Sans Pro',sans-serif normal;
+	}
+	
+
+	/********************Drop down (jankoatwarpspeed.com)******************************/
+
+	.desc { color:# 6b6b6b;
+}
+  .desc a {
+    color: #0092dd;}
+
+        .dropdown dd, .dropdown dt, .dropdown ul { margin:0px; padding:0px; }
+        .dropdown dd { position:relative; }
+	.dropdown dt a {
+	    background: url("../images/arrowMenu.png") no-repeat scroll right center # F0F8FF;
+    border: 1px solid #8DB6CD;
+	    display: block;
+	    padding-right: 20px;
+	    width: 180px;
+	}
+	.dropdown a, .dropdown a:visited {
+	    color: # 104E8B;
+    font: 20px 'Source Sans Pro',
+    sans - serif normal;
+    outline: medium none;
+    text - decoration: none;
+}
+  .dropdown dt a span {
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+}
+  .dropdown dd ul {
+    background: #F0F8FF none repeat scroll 0 0;
+    border: 1px solid #8DB6CD; color:# 8DB6CD;
+    display: none;
+    left: 0px;
+    padding: 5px 0px;
+    position: absolute;
+    top: 2px;
+    width: auto;
+    min - width: 200px;
+    list - style: none;
+}
+  .dropdown span.value {
+    display: none;
+}
+  .dropdown dd ul li a {
+    padding: 5px;
+    display: block;
+}
+  .dropdown dd ul li a: hover {
+    background - color: #8DB6CD;}        
+/*
+ * Map Container
+ */
+	# map {
+      height: 510px;
+      padding: 10px;
+      width: 1000px;
+    }
+
+    #
+    wardsTooltip,
+    #countiesTooltip {
+      border - radius: 15px 15px 15px 15px;
+      height: 150px;
+      position: relative;
+      width: 250px;
+    }#
+    wardsTooltip.hoverBlock,
+    #countiesTooltip.hoverBlock {
+      background - color: #8DB6CD;
+	    border-radius: 15px 15px 15px 15px;
+	    height: 100%;
+	    left: 0;
+	    opacity: 0.6;
+	    overflow: hidden;
+	    position: absolute;
+	    top: 0;
+	    width: 250px;
+	}
+	# wardsTooltip.wardsName,
+      #countiesTooltip.hoverCaption {
+        background: none repeat scroll 0 0# F0F8FF;
+        border - radius: 15px 15px 0 0;
+        color: #808080;
+	    font: 16px 'Oswald',sans-serif;
+	    height: 25px;
+	    left: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    overflow: hidden;
+	    padding: 2px 5px;
+	    position: absolute;
+	    top: 0;
+	    width: 240px;
+	}
+	# wardsTooltip.districtName {
+          background: none repeat scroll 0 0 #104E8B;
+	    color: # F0F8FF;
+          font: bold 14px / 23px arial,
+          sans - serif;
+          height: 20px;
+          margin - top: 25px;
+          padding: 2px 5px;
+          width: 240px;
+        }#
+        wardsTooltip ul,
+        #countiesTooltip ul {
+          color: #104E8B;
+	    margin-top: 5px;
+	    padding: 0;
+	    position: absolute;
+	}
+	# wardsTooltip ul li,
+          #countiesTooltip ul li {
+            height: auto;
+            list - style: none outside none;
+            margin: 0;
+            padding: 0;
+          }#
+          wardsTooltip ul.hoverInfo,
+          #countiesTooltip ul.hoverInfo {
+            height: 90px;
+            margin - left: 5px;
+            width: 130px;
+          }#
+          countiesTooltip ul.hoverInfo {
+            margin - top: 25px;
+          }#
+          wardsTooltip ul.hoverInfo2 {
+            margin - left: 135px;
+            margin - top: 5px;
+            width: 110px;
+          }#
+          wardsTooltip ul.hoverInfo li,
+          #countiesTooltip ul.hoverInfo li {
+            color: #104E8B;
+	    float: left;
+	    font: bold 44px arial;
+	}
+	# wardsTooltip ul.hoverInfo li.risk {
+              margin - left: 8px;
+            }#
+            wardsTooltip ul.hoverInfo li# bar {
+              border: 1px solid black;
+              height: 12px;
+              width: 110px;
+            }#
+            wardsTooltip ul.hoverInfo li.lbl,
+            #countiesTooltip ul.hoverInfo li.lbl {
+              font: 14px 'Source Sans Pro',
+              sans - serif normal;
+            }#
+            countiesTooltip ul.hoverInfo li.lbl {
+              color: #FCFCFC;
+              font - weight: bold;
+            }#
+            wardsTooltip ul.hoverInfo li div.conf {
+              font - size: 10px;
+              font - weight: bold;
+              padding - left: 2px;
+              position: absolute;
+            }#
+            wardsTooltip ul.hoverInfo li div.high {
+              margin - left: 100px;
+            }#
+            wardsTooltip ul.hoverInfo li div.barConfidence {
+              background - color: white;
+              height: 10px;
+              padding: 1px;
+            }#
+            wardsTooltip ul.hoverInfo2 li {
+              color: white;
+              float: left;
+              font: bold 14px arial;
+              height: 18px;
+              padding: 0;
+              text - transform: uppercase;
+              width: 80px;
+            }#
+            wardsTooltip ul.hoverInfo2 li.values {
+              color: #104E8B;
+	}
+	.leaflet-control-zoom-fullscreen {
+	    background-image: url("../js/leafFullScreen/icon-fullscreen.png");
+	}
+	.leaflet-control-zoom-fullscreen.last {
+	    margin-top: 5px;
+	}
+	# map: -moz - full - screen {
+                height: 100 % !important;
+                width: 100 % !important;
+              }
+              /*
+               *
+               * Graph Container
+               *
+               */
+              #
+              graph {
+                height: 250px;
+                margin: 10px 0;
+                width: 1010px;
+              }
