@@ -1,9 +1,8 @@
 http://www.envhealthatlas.co.uk/eha/Lung/ 
 
-EHA
-===
-THE ENVIRONMENT AND HEALTH ATLAS FOR ENGLAND AND WALES
-A collection of online maps illustrating geographical distributions of disease risk and environmental agents
+
+<h1>THE ENVIRONMENT AND HEALTH ATLAS FOR ENGLAND AND WALES</h1>
+<h2>A collection of online maps illustrating geographical distributions of disease risk and environmental agents</h2>
 
 Health conditions:
 
