@@ -1,10 +1,11 @@
 http://www.envhealthatlas.co.uk/eha/Lung/ 
 
 
-<h1>THE ENVIRONMENT AND HEALTH ATLAS FOR ENGLAND AND WALES</h1>
-<h2>A collection of online maps illustrating geographical distributions of disease risk and environmental agents</h2>
+<h1>EHA</h1>
+<h2>THE ENVIRONMENT AND HEALTH ATLAS FOR ENGLAND AND WALES</h2>
+<h3>A collection of online maps illustrating geographical distributions of disease risk and environmental agents</h3>
 
-Health conditions:
+<h4>Health conditions:</h4>
 
 Lung cancer
 Breast cancer
